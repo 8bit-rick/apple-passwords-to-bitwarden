@@ -57,8 +57,13 @@ def main():
     args = parser.parse_args()
 
     try:
+        print("Loading Bitwarden CSV export...")
         bw = load_csv(Path(args.bitwarden))
+        print(f"Loaded {len(bw)} entries from Bitwarden export.")
+
+        print("Loading Apple Passwords CSV export...")
         apple = load_csv(Path(args.apple))
+        print(f"Loaded {len(apple)} entries from Apple export.")
     except Exception as e:
         print(f"Error loading CSV: {e}")
         return
@@ -73,8 +78,7 @@ def main():
     missing_mask = ~apple["__key"].isin(bw_keys)
     missing = apple[missing_mask].copy()
 
-    print(f"Total Apple entries: {len(apple)}")
-    print(f"Entries missing in Bitwarden: {len(missing)}")
+    print(f"Found {len(missing)} Apple entries missing in Bitwarden.")
 
     out = pd.DataFrame(
         columns=[
@@ -108,8 +112,7 @@ def main():
     out["login_totp"] = missing.get(args.apple_totp_col, "")
 
     out.to_csv(args.output, index=False)
-
-    print(f"Wrote {len(out)} entries to {args.output}")
+    print(f"Successfully wrote {len(out)} entries to {args.output}")
 
 if __name__ == "__main__":
     main()
