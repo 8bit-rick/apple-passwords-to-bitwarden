@@ -26,8 +26,7 @@ pip install pandas
 ## Usage
 
 Clone this repo and navigate to it in your terminal. Then run:
-
-python apple_passwords_to_bitwarden.py -b path/to/bitwarden.csv -a path/to/apple_passwords.csv -o output.csv
+`python apple_passwords_to_bitwarden.py -b path/to/bitwarden.csv -a path/to/apple_passwords.csv -o output.csv`
 
 ### Optional Arguments
 
@@ -39,7 +38,7 @@ python apple_passwords_to_bitwarden.py -b path/to/bitwarden.csv -a path/to/apple
 
 ### Example
 
-python apple_passwords_to_bitwarden.py -b bitwarden_export.csv -a ApplePasswords.csv -o migrated.csv –marker “Migrated on 2025-11-25”
+`python apple_passwords_to_bitwarden.py -b bitwarden_export.csv -a ApplePasswords.csv -o migrated.csv –marker “Migrated on 2025-11-25”`
 
 ## Importing Back to Bitwarden
 
