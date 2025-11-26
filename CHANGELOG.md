@@ -2,9 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [0.1.1] - 2025-11-26
 
-- Prepare for next set of improvements and bug fixes.
+### Added
+
+- Added basic user feedback print statements to the script for improved progress visibility during execution without changing core functionality.
 
 ## [0.1.0] - 2025-11-25
 

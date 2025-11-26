@@ -8,6 +8,7 @@ This tool helps Mac users migrate missing password entries from Apple Passwords 
 - Outputs a Bitwarden-importable CSV with only missing entries
 - Supports customizable column headers and flexible note-marking
 - Simple command-line interface with helpful error messages
+- Provides basic progress messages during execution for improved user feedback
 
 ## Prerequisites
 
@@ -29,6 +30,8 @@ Clone this repo and navigate to it in your terminal. Then run:
 
 `python apple_passwords_to_bitwarden.py -b path/to/bitwarden.csv -a path/to/apple_passwords.csv -o output.csv`
 
+Note: The script will print progress messages indicating loading status and number of entries processed to keep you informed.
+
 ### Optional Arguments
 
 - `--apple-url-col`, `--apple-user-col`, `--apple-pass-col`, `--apple-title-col`, `--apple-notes-col`, `--apple-totp-col`  
@@ -39,7 +42,7 @@ Clone this repo and navigate to it in your terminal. Then run:
 
 ### Example
 
-`python apple_passwords_to_bitwarden.py -b bitwarden_export.csv -a ApplePasswords.csv -o migrated.csv –marker “Migrated on 2025-11-25”`
+`python apple_passwords_to_bitwarden.py -b bitwarden_export.csv -a ApplePasswords.csv -o migrated.csv --marker "Migrated on 2025-11-25"`
 
 ## Importing Back to Bitwarden
 
