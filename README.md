@@ -39,7 +39,7 @@ Clone this repo and navigate to it in your terminal. Then run:
 
 ### Example
 
-python apple_passwords_to_bitwarden.py -b bitwarden_export.csv -a ApplePasswords.csv -o migrated.csv –marker “Migrated on 2025-11-25”
+`python apple_passwords_to_bitwarden.py -b bitwarden_export.csv -a ApplePasswords.csv -o migrated.csv –marker “Migrated on 2025-11-25”`
 
 ## Importing Back to Bitwarden
 
